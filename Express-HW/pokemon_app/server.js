@@ -11,8 +11,8 @@ app.get("/", (req, res) => {
   res.send(`<h1>Welcome to the Pokemon App!</h1>`);
 });
 
-app.get("/pokemon/", (req, res) => {
-  res.send(pokemon);
+app.get("/pokemon", (req, res) => {
+  res.render("Index", { pokemon: pokemon });
 });
 
 app.listen(port, () => {
