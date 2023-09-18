@@ -14,7 +14,8 @@ class Index extends React.Component {
           {this.props.pokemon.map((pokemon, i) => (
             <h3>
               <li key={i}>
-                <a href={`/pokemon/${i}`}>{pokemon.name}</a> <br></br>
+                <a href={`/pokemon/${i}`}>{pokemon.name.toUpperCase()}</a>{" "}
+                <br></br>
                 <img src={pokemon.img} />
                 <br></br>
               </li>
