@@ -3,23 +3,27 @@ const myStyle = {
   color: "#219ebc",
   backgroundColor: "#e3d5ca",
   padding: "10px",
+  lineHeight: "0.7",
 };
 
 class Index extends React.Component {
   render() {
+    const { pokemon } = this.props;
+
     return (
       <div style={myStyle}>
         <h1>See All The Pokemon!</h1>
         <ul>
-          {this.props.pokemon.map((pokemon, i) => (
-            <h3>
-              <li key={i}>
-                <a href={`/pokemon/${i}`}>{pokemon.name.toUpperCase()}</a>{" "}
-                <br></br>
-                <img src={pokemon.img} />
-                <br></br>
-              </li>
-            </h3>
+          {pokemon.map((pokemon, i) => (
+            <li key={i}>
+              <h2>
+                <a href={`/pokemon/${i}`}>
+                  {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+                </a>{" "}
+              </h2>
+              <img src={pokemon.img + ".jpg"} />
+              <br></br>
+            </li>
           ))}
         </ul>
       </div>
