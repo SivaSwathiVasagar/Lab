@@ -206,7 +206,7 @@ app.get("/vegetables/:id/edit", async (req, res) => {
 //add show route
 app.get("/vegetables/:id", async (req, res) => {
   try {
-    const Vegetable = await Vegetable.findById(req.params.id);
+    const vegetable = await Vegetable.findById(req.params.id);
     res.render("vegetables/Show", { vegetable });
   } catch (error) {
     console.log(error);

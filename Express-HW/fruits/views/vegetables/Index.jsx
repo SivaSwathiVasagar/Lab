@@ -42,7 +42,7 @@ class Index extends React.Component {
                     <input type="submit" value="DELETE" />
                   </form>
                   <a href={`/vegetables/${vegetable._id}/edit`}>
-                    Edit This Vegetables
+                    Edit This Vegetable
                   </a>{" "}
                   <br></br>
                   <br></br>

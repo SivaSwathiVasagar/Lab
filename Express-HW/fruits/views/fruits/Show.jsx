@@ -13,6 +13,7 @@ class Show extends React.Component {
             ? "Its is ready to eat"
             : "It is not ready to eat... Cant touch this"}
           <br></br>
+          <br></br>
           <a href="/fruits">Home</a>
         </DefaultLayout>
       </div>

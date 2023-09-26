@@ -18,6 +18,9 @@ class New extends React.Component {
           {this.props.img && <img src={this.props.img} alt="Pokemon" />}
           <input type="submit" value="Create New Pokemon" />
         </form>
+        <h4>
+          <a href="/pokemon">Back</a>
+        </h4>
       </div>
     );
   }
