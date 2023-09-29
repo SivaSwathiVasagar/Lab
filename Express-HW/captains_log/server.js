@@ -25,14 +25,29 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
+app.get("/logs", (req, res) => {
   res.send("Recieved");
 });
 
-app.get("/new", (req, res) => {
+//NEW
+app.get("/logs/new", (req, res) => {
   res.render("New");
 });
 
+// CREATE
+
+app.post("/logs", async (req, res) => {
+  try {
+    if (req.body.shipIsBroken === "on") {
+      req.body.shipIsBroken = true;
+    } else {
+      req.body.shipIsBroken = false;
+    }
+    res.send(req.body);
+  } catch (error) {
+    console.log(error);
+  }
+});
 app.listen(process.env.PORT || 3000, () => {
   console.log("listening to PORT");
 });
