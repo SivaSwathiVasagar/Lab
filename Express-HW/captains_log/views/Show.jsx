@@ -7,10 +7,10 @@ class Show extends React.Component {
     return (
       <div>
         <DefaultLayout title={"Show Page"}>
-          The {logs.title} is {logs.entry}
+          Title : {logs.title} <br></br> Entry : {logs.entry}
           <br></br>
           <br></br>
-          {fruit.shipIsBroken
+          {logs.shipIsBroken
             ? "Ship is Broken, Not Ready to Sail"
             : "Ship is Not Broken, Ready to Sail"}
           <br></br>

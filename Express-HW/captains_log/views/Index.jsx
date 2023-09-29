@@ -14,8 +14,8 @@ class Index extends React.Component {
             {this.props.logs.map((log, i) => {
               return (
                 <li key={i}>
-                  Title: <a href={`/logs/${log.id}`}>{log.title}</a> <br></br>{" "}
-                  Entry is {log.entry}
+                  Title : <a href={`/logs/${log.id}`}>{log.title}</a> <br></br>{" "}
+                  Entry : {log.entry}
                   <br></br>
                   {log.shipIsBroken ? (
                     <span>Ship is Broken, Not Ready to Sail</span>
